@@ -15,7 +15,7 @@ jobs:
     ## Define a sequence of steps to be executed ${{[ls, python --version]}}
     strategy:
       matrix:
-        commands: [ls, git config --global user.email "MahmoudHegazi@github.com", git config --global user.name "mahmoud", git fetch, git pull origin main, git add .,git branch staging]
+        commands: [ls, git config --global user.name "mahmoud", git fetch, git pull origin main, git add .,git branch staging]
     steps:
       ## Use the public `checkout` actoin  in version v2  
       ## to checkout the existing code in the repository
@@ -23,4 +23,3 @@ jobs:
       ## Use the public `setup-python` action  in version v2  
       ## Executes the `python --version` command
       - run: ${{matrix.commands}}
-      - run: echo ${{github.token}}
