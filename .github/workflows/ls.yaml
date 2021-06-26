@@ -14,7 +14,7 @@ jobs:
     ## Define a sequence of steps to be executed ${{[ls, python --version]}}
     strategy:
       matrix:
-        commands: [ls, python --version]
+        commands: [ls, git checkout master, git pull origin main, git add ., git commit -m 'automatic push', git push]
     steps:
       ## Use the public `checkout` actoin  in version v2  
       ## to checkout the existing code in the repository
