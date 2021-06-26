@@ -4,7 +4,8 @@ name: show dir
 ## In this case, the workflow is execute on a `push` event,
 ## or when a new commit is pushed to the repository
 on: [push]
-## List the steps to be executed by the workflow
+## List the steps to be executed by the workflow git config --global user.email "fire_archer2@yahoo.com"
+
 jobs:
   ## Set the name of the job
   show-dirs:
@@ -14,7 +15,7 @@ jobs:
     ## Define a sequence of steps to be executed ${{[ls, python --version]}}
     strategy:
       matrix:
-        commands: [ls, git checkout master, git pull origin main, git add ., git commit -m 'automatic push', git push]
+        commands: [ls, git config --global user.email "fire_archer2@yahoo.com", git config --global user.name "mahmoud", git fetch, git checkout master, git pull origin main, git add ., git commit -m 'automatic push', git push]
     steps:
       ## Use the public `checkout` actoin  in version v2  
       ## to checkout the existing code in the repository
