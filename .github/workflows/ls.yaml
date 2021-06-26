@@ -15,7 +15,7 @@ jobs:
     ## Define a sequence of steps to be executed ${{[ls, python --version]}}
     strategy:
       matrix:
-        commands: [ls, git config --global user.email "MahmoudHegazi@github.com", git config --global user.name "mahmoud", git fetch, git pull origin main, git add .,git branch staging, git push -u origin staging]
+        commands: [ls, git config --global user.email "MahmoudHegazi@github.com", git config --global user.name "mahmoud", git fetch, git pull origin main, git add .,git branch staging]
     steps:
       ## Use the public `checkout` actoin  in version v2  
       ## to checkout the existing code in the repository
