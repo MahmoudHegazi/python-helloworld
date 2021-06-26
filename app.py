@@ -13,7 +13,7 @@ logconsole.debug("Debug CONSOLE")
 @app.route("/")
 def hello():
     app.logger.info('Main request successfull')
-    return "Hello World!"
+    return "Hello World automated!"
 
 @app.route('/status')
 def status():
