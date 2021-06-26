@@ -11,11 +11,14 @@ jobs:
     ## Configure the operating system the workflow should run on.
     ## In this case, the job on Ubuntu
     runs-on: ubuntu-latest
-    ## Define a sequence of steps to be executed 
+    ## Define a sequence of steps to be executed ${{[ls, python --version]}}
+    strategy:
+      matrix:
+        commands: [ls, python --version]
     steps:
       ## Use the public `checkout` actoin  in version v2  
       ## to checkout the existing code in the repository
       - uses: actions/checkout@v2
       ## Use the public `setup-python` action  in version v2  
       ## Executes the `python --version` command
-      - run: ls
+      - run: ${{matrix.commands}}
