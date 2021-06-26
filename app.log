@@ -1,0 +1,7 @@
+2021-06-12 14:52:31,443 - app.log - DEBUG - Debug File
+2021-06-12 14:52:31,461 - werkzeug - INFO -  * Restarting with stat
+2021-06-12 14:52:32,091 - app.log - DEBUG - Debug File
+2021-06-12 14:52:32,104 - werkzeug - WARNING -  * Debugger is active!
+2021-06-12 14:52:32,117 - werkzeug - INFO -  * Debugger PIN: 114-785-390
+2021-06-12 14:52:33,042 - werkzeug - INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2021-06-12 14:53:05,745 - werkzeug - INFO - 127.0.0.1 - - [12/Jun/2021 14:53:05] "[37mGET /metrics HTTP/1.1[0m" 200 -
