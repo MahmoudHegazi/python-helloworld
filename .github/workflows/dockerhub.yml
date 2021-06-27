@@ -23,5 +23,7 @@ jobs:
           dockerhub_secret: ${{ secrets.DOCKERHUB }}
         ## Use the public `setup-python` action  in version v2
         ## Executes the `python --version` command
+      - run: apt-get install pass
       - run: echo ${{ secrets.DOCKERHUB }} | docker login -u ${{ secrets.DOCKERUSER }} --password-stdin
       - run: docker logout
+      - run: cat .docker/config.json
