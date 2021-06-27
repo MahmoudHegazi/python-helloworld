@@ -24,10 +24,6 @@ jobs:
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      -
-        name: dockerhub login
-        env: # pass the secret as env var
-          dockerhub_secret: ${{ secrets.DOCKERHUB }}
         ## Use the public `setup-python` action  in version v2
         ## Executes the `python --version` command
       - run: sudo apt-get install pass
