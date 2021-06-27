@@ -1,0 +1,27 @@
+##  Named of the workflow.
+name: Push To DockerHub
+## Set the trigger policy.
+## In this case, the workflow is execute on a `push` event,
+## or when a new commit is pushed to the repository
+on: [push]
+## List the steps to be executed by the workflow
+
+jobs:
+  ## Set the name of the job
+  show-dirs:
+    ## Configure the operating system the workflow should run on.
+    ## In this case, the job on Ubuntu
+    runs-on: ubuntu-latest
+    ## Define a sequence of steps to be executed ${{[ls, python --version]}}
+    steps:
+      ## Use the public `checkout` actoin  in version v2  
+      ## to checkout the existing code in the repository
+      - uses: actions/checkout@v2
+      ## login into dockerhub
+      - shell: bash
+      - name: DockerHub login
+      env: # pass the secret as env var
+        dockerhub_secret: ${{ secrets.DOCKERHUB }}
+      ## Use the public `setup-python` action  in version v2
+      ## Executes the `python --version` command
+      - run: docker login --username pythonking1 --password "$dockerhub_secret"
