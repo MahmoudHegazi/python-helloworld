@@ -8,7 +8,7 @@ on: [push]
 
 jobs:
   ## Set the name of the job
-  show-dirs:
+  docker-push:
     ## Configure the operating system the workflow should run on.
     ## In this case, the job on Ubuntu
     runs-on: ubuntu-latest
