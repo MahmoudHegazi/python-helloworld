@@ -18,8 +18,9 @@ jobs:
       ## to checkout the existing code in the repository
       - uses: actions/checkout@v2
       ## login into dockerhub
+        name: dockerhub login
         env: # pass the secret as env var
           dockerhub_secret: ${{ secrets.DOCKERHUB }}
         ## Use the public `setup-python` action  in version v2
         ## Executes the `python --version` command
-      - run: docker login --username pythonking1 --password "$dockerhub_secret"
+      - run: echo ${{ secrets.DOCKERHUB }} | docker login -u ${{ secrets.DOCKERUSER }} --password-stdin
