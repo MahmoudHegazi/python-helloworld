@@ -7,7 +7,6 @@ on:
 
 jobs:
   docker-build-push:
-    docker:
       runs-on: ubuntu-latest
       steps:
         -
