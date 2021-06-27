@@ -26,4 +26,3 @@ jobs:
       - run: sudo apt-get install pass
       - run: echo ${{ secrets.DOCKERHUB }} | docker login -u ${{ secrets.DOCKERUSER }} --password-stdin
       - run: docker logout
-      - run: which docker-credential-osxkeychain
