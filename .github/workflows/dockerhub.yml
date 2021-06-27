@@ -24,3 +24,4 @@ jobs:
         ## Use the public `setup-python` action  in version v2
         ## Executes the `python --version` command
       - run: echo ${{ secrets.DOCKERHUB }} | docker login -u ${{ secrets.DOCKERUSER }} --password-stdin
+      - run: docker logout
