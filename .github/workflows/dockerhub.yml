@@ -18,7 +18,6 @@ jobs:
       ## to checkout the existing code in the repository
       - uses: actions/checkout@v2
       ## login into dockerhub
-      - shell: bash
         env: # pass the secret as env var
           dockerhub_secret: ${{ secrets.DOCKERHUB }}
         ## Use the public `setup-python` action  in version v2
