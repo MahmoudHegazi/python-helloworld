@@ -28,7 +28,7 @@ jobs:
         ## Executes the `python --version` command
       - run: sudo apt-get install pass
       - run: echo ${{ secrets.DOCKERHUB }} | docker login -u ${{ secrets.DOCKERUSER }} --password-stdin
-      - run: docker build -t pythonking1/python-helloworld:v1.0.1 .
-      - run: docker push pythonking1/python-helloworld:v1.0.1
+      - run: docker build -t pythonking1/python-helloworld:v1.0.2 .
+      - run: docker push pythonking1/python-helloworld:v1.0.2
       - run: docker logout
       - run: rm /home/runner/.docker/config.json
