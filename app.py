@@ -1,19 +1,15 @@
 from flask import Flask, jsonify, json
 import json
-import logging, logging.config, yaml
-
+import logging
+import random
 app = Flask(__name__)
 
-logging.config.dictConfig(yaml.load(open('logging.conf')))
-logfile    = logging.getLogger('app.log')
-logconsole = logging.getLogger('console')
-logfile.debug("Debug File")
-logconsole.debug("Debug CONSOLE")
 
 @app.route("/")
 def hello():
+    luckynumber = random.choice([1,2,12,18,15,14,3,15,30,10,6,11,7,8])
     app.logger.info('Main request successfull')
-    return "Hello World normal automated!"
+    return "Hello World Advanced automated! Your lucky number is {}".format(luckynumber)
 
 @app.route('/status')
 def status():
@@ -33,4 +29,5 @@ def metrics():
             )
     return response
 if __name__ == "__main__":
+    logging.basicConfig(filename='logging.conf',level=logging.DEBUG)
     app.run(host='0.0.0.0', port=8080)
