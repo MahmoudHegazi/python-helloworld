@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: python-helloworld
-  name: python-helloworld
+    app: python-helloworld1
+  name: python-helloworld1
   namespace: default 
 spec:
   replicas: 3
