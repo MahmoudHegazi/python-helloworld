@@ -2,3 +2,4 @@ Flask==1.1.1
 werkzeug==0.16.1
 pytest==4.6.11
 PyYAML==5.4.1
+pyyaml
