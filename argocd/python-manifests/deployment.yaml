@@ -9,7 +9,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: python-helloworld
+      app: python-helloworld1
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: python-helloworld
+        app: python-helloworld1
     spec:
       containers:
       - image: pythonking1/python-helloworld:v1.0.1
         imagePullPolicy: IfNotPresent
-        name: python-helloworld
+        name: python-helloworld1
         resources:
           requests:
             cpu: 50m
