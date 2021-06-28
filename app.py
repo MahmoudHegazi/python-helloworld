@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello():
     luckynumber = random.choice([1,2,12,18,15,14,3,15,30,10,6,11,7,8])
     app.logger.info('Main request successfull')
-    return "Hello World Advanced automated! Your lucky number is {}".format(luckynumber)
+    return "Hello World Advanced automated! Your lucky number is: {}".format(luckynumber)
 
 @app.route('/status')
 def status():
