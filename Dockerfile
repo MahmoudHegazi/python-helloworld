@@ -3,6 +3,5 @@ FROM python:3.8
 LABEL maintainer="Python King"
 COPY . /app
 WORKDIR /app
-RUN sudo apt-get install python-yaml
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
