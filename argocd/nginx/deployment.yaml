@@ -24,6 +24,6 @@ spec:
         tag: alpine
     spec:
       containers:
-      - image: nginx:alpine-perl
+      - image: nginx:alpine
         imagePullPolicy: IfNotPresent
         name: nginx-alpine
