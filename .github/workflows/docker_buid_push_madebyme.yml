@@ -29,6 +29,6 @@ jobs:
       - run: sudo apt-get install pass
       - run: echo ${{ secrets.DOCKERHUB }} | docker login -u ${{ secrets.DOCKERUSER }} --password-stdin
       - run: docker build -t pythonking1/python-helloworld1:v1.0.1 .
-      - run: docker push pythonking1/python-helloworld1:latest
+      - run: docker push pythonking1/python-helloworld1:v1.0.1
       - run: docker logout
       - run: rm /home/runner/.docker/config.json
