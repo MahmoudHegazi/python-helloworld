@@ -3,5 +3,5 @@ FROM python:3.8
 LABEL maintainer="Python King"
 COPY . /app
 WORKDIR /app
-RUN pip install -r requirements.txt --extra-index-url
+RUN pip install -r --extra-index-url requirements.txt
 CMD ["python", "app.py"]
