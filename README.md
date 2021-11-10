@@ -11,10 +11,13 @@ Automated
 # add background audio to file has background audio
 
 ```python
+
 import moviepy.editor as mpe
 my_clip = mpe.VideoFileClip('some_clip.mp4')
 audio_background = mpe.AudioFileClip('some_background.mp3')
 # remove it if the video has no audio
 final_audio = mpe.CompositeAudioClip([my_clip.audio, audio_background])
 final_clip = my_clip.set_audio(final_audio)
+
+#final_clip.write_videofile("output/output.mp4",codec= 'mpeg4' ,audio_codec='libvorbis')
 ```
